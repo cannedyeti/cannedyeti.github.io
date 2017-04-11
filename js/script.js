@@ -15,20 +15,8 @@ $(function(){
 	    event.stopPropagation();
     });
 
-    $('li').click(function(){
-        console.log($(this))
-        if($(this).hasClass('typeAni'))
-                setTimeout(function(){
-                    Typed.new('.typed', {
-                    strings: ["Hi! I'm Connor.", "But you can call me Con Job.", "I code cool shit.", "Are you fucking sick of this yet?", "ARE YOU?"],
-                    typeSpeed: 70
-                    });
-                }, 2000)
-        Typed.new('.typed', {
-                    strings: [""],
-                    typeSpeed: 70
-        });
-    })
+
+
 // VIDEO PLAY
 var video = $("#video");
 var video2 = $("#video2");
@@ -56,6 +44,54 @@ $(video3).on('canplay', function(){
             $(this).get(0).pause();
         })
     });
+
+    // LINK ANIMATIONS
+
+    $(".homeText").hide()
+    $(".codeText").hide()
+    $(".aboutText").hide()
+    $(".resumeText").hide()
+
+    $(".homeLink").on("mouseenter", function(){
+        $('.homeIcon').hide();
+        $('.homeText').show();
+    });
+
+    $(".homeLink").on("mouseleave", function(){
+        $('.homeIcon').show();
+        $('.homeText').hide();
+    });
+
+    $(".codeLink").on("mouseenter", function(){
+        $('.codeIcon').hide();
+        $('.codeText').show();
+    });
+
+    $(".codeLink").on("mouseleave", function(){
+        $('.codeIcon').show();
+        $('.codeText').hide();
+    });
+
+
+    $(".aboutLink").on("mouseenter", function(){
+        $('.aboutIcon').hide();
+        $('.aboutText').show();
+    });
+
+    $(".aboutLink").on("mouseleave", function(){
+        $('.aboutIcon').show();
+        $('.aboutText').hide();
+    });
+
+    $(".resumeLink").on("mouseenter", function(){
+        $('.resumeIcon').hide();
+        $('.resumeText').show();
+    });
+
+    $(".resumeLink").on("mouseleave", function(){
+        $('.resumeIcon').show();
+        $('.resumeText').hide();
+    });
+
+
 });
-
-

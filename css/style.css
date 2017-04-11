@@ -31,13 +31,10 @@ section {
   left: 0;
 }
 
-
-
 #projectHome {
   left: 100%;
   background: rgb(42,42,134);
 }
-
 
 #contactHome {
   right: 200%;
@@ -48,17 +45,7 @@ section {
   bottom: 100%;
   left: 10%;
   background: rgb(150, 0, 89);
-
 }
-
-#projects {
-  left: 10%;
-  top: 100%;
-  background: darkblue;
-  text-align: center;
-}
-
-
 
 ul {
  position: fixed; 
@@ -141,8 +128,6 @@ ul a:hover {
   transform: scale(1.2) !important;
 }
 
-
-
 ul {
   position: fixed;
   top: 0;
@@ -174,11 +159,14 @@ a {
   font-size: 38px;
 }
 
+li.icon {
+    margin-left: -2vw;
+}
+
 .titleMore {
   font-family: 'Syncopate', sans-serif;
   font-size: 30px;
 }
-
 
 .hint {
   font-size: 13px;
@@ -192,7 +180,6 @@ a {
 .hint a:hover {
   color: #FFF;
 }
-
 
 .page .icon {
   position: absolute;
@@ -288,7 +275,6 @@ a {
   transition-delay: 1s;
 }
 
-
 .credit{
 	position: absolute;
 	bottom: 5px;
@@ -333,7 +319,6 @@ i.upIcon:hover{
   color: rgba(0, 0, 0, 1);
   background: white;
 }
-
 
 .fa-github:hover {
   color: #767676;
@@ -389,39 +374,28 @@ i.upIcon:hover{
 }
 
 .languages {
-  font-size: 60px;
+  font-size: 40px;
+  /*color: black;*/
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
 }
 .languages i {
   margin: 5px;
 }
 
-.face {
-  height:25vh;
-  margin-top: 40px;
+.languages:hover {
+  color: white;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
 }
 
-.bubble {
-  height: 31vh;
-  width: 35vw;
-  margin-top: -20px;
-  background-image: url('../img/bubble.png');
-  background-size: cover;
-  background-repeat: none;
-}
-.face-bubble {
-  margin-top: -20px;
-}
-
-.typed {
-  font-family: 'Raleway', sans-serif;
-  color: black;
-  font-size: 25px;
-  text-align: center;
-  width: 20vw;
-  padding-top: 70px;
-  margin-left: 50px;
-}
-.projectContainer video{
+.projectContainer img{
   height: 400px;
   margin-left: 30px;
 }
@@ -440,4 +414,34 @@ i.upIcon:hover{
 .pageScroll {
   overflow: scroll;
   height: 98vh;
+}
+
+.face-bubble img{
+  max-height: 50vh;
+  margin-bottom: -10vh;
+}
+
+.textSwap {
+  min-height: 10px;
+  padding: 7px 0 7px 0;
+  color: white;
+}
+
+  .textSwap{
+  font-family: 'Syncopate', sans-serif;
+}
+
+.default-btn {
+  background-color: purple;
+  color: white;
+  border: 1px solid white;
+}
+
+.default-btn:hover {
+  background-color: white;
+  color: purple;
+}
+
+.page a.default-btn:hover {
+  color: purple;
 }

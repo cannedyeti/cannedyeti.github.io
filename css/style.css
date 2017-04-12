@@ -403,6 +403,7 @@ i.upIcon:hover{
 .projectContainer {
   text-align: center;
   margin-top: 20%;
+  overflow: scroll;
 }
 
 .projectContainer h4 {
@@ -444,4 +445,8 @@ i.upIcon:hover{
 
 .page a.default-btn:hover {
   color: purple;
+}
+
+#title {
+  display: block;
 }

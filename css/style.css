@@ -376,11 +376,6 @@ i.upIcon:hover{
 .languages {
   font-size: 40px;
   /*color: black;*/
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
 }
 .languages i {
   margin: 5px;
@@ -388,11 +383,20 @@ i.upIcon:hover{
 
 .languages:hover {
   color: white;
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: blur(0px);
+
+}
+
+.projDesc {
+  margin-top: 100px;
+}
+
+.projDesc i {
+  margin-top: 20%;
+  font-size: 40px;
+}
+
+.fa-link:hover {
+  color: black;
 }
 
 .projectContainer img{
@@ -401,7 +405,6 @@ i.upIcon:hover{
 }
 
 .projectContainer {
-  text-align: center;
   margin-top: 2%;
   overflow: scroll;
 }

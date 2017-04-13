@@ -200,6 +200,10 @@ li.icon {
   width: 100%;
 }
 
+.nav-bar2 {
+  display: none;
+}
+
 .resumePage .icon {
   margin: auto;
 }
@@ -373,9 +377,13 @@ i.upIcon:hover{
   font-size: 20px;;
 }
 
+.languagesTop {
+  padding-top: 50px;
+}
+
 .languages {
   font-size: 40px;
-  /*color: black;*/
+
 }
 .languages i {
   margin: 5px;
@@ -383,7 +391,9 @@ i.upIcon:hover{
 
 .languages:hover {
   color: white;
-
+}
+.contact_info {
+  font-size: 40px;
 }
 
 .projDesc {
@@ -421,8 +431,8 @@ i.upIcon:hover{
 }
 
 .face-bubble img{
-  max-height: 50vh;
-  margin-bottom: -10vh;
+  max-height: 60vh;
+  margin: 0 auto;
 }
 
 .textSwap {
@@ -446,7 +456,23 @@ i.upIcon:hover{
   color: purple;
 }
 
+#contactHome form {
+  padding-top: 20px;
+}
+
 .page a.default-btn:hover {
+  color: purple;
+}
+
+.white-btn {
+  background: purple;
+  border: 1px solid white;
+  color: white;
+}
+
+.white-btn:hover {
+  background: white;
+  border: 1px solid white;
   color: purple;
 }
 
@@ -506,7 +532,6 @@ i.upIcon:hover{
     transform: none;
   }
 
-
   #t2:target .page#home .icon, 
   #t3:target .page#home .icon,
   #t4:target .page#home .icon,
@@ -525,6 +550,42 @@ i.upIcon:hover{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .nav-bar2 {
+    display: inline;
+  }
+
+  ul.nav-bar2 {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,.4);
+    bottom: auto;
+    right: 0;
+    width: 100%;
+    height: 80px;
+  }
+  ul.nav-bar2 li {
+    display: inline-block;
+    margin: 20px;
+  }
+
+  .credit{
+    position: fixed;
+    bottom: 10px;
+    background: rgba(0,0,0,.2);
+
+    top: auto;
+    left: 44%;
+    right: auto;
+    width: 15%;
+    text-align: center;
+    font-size: 25px;
   }
 
 }

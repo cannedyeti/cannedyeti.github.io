@@ -453,3 +453,77 @@ i.upIcon:hover{
 #title {
   display: block;
 }
+
+@media (max-width: 800px) {
+  html {
+    overflow: scroll;
+  }
+  .page {
+    position: relative;
+  }
+
+  #home {
+    background: url("../img/back7.jpg-large");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  #projectHome, #contactHome, #resume {
+    transform: translateX(0);
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+  }
+  #projectHome{
+    height: 100%;
+  }
+  .pageScroll {
+    height: 100%
+  }
+
+  #t1:target .page#home {
+    transform: translateX(0);
+  }
+  #t2:target .page#projectHome {
+      transform: translateX(0);
+  }
+  #t3:target .page#contactHome {
+      transform: none;
+  }
+  #t4:target .page#resume {
+      transform: translateY(0);
+  }
+  #t5:target .page#projects {
+      transform: translateY(0);
+  }
+  #t6:target .page#contact {
+      transform: translateY(0);
+  }
+
+  .page .icon {
+    transform: none;
+  }
+
+
+  #t2:target .page#home .icon, 
+  #t3:target .page#home .icon,
+  #t4:target .page#home .icon,
+  #t5:target .page#home .icon,
+  #t6:target .page#home .icon {
+    -webkit-filter: blur(0px);
+  filter: blur(0px);
+  }
+
+  #t2:target .page#home, 
+  #t3:target .page#home,
+  #t4:target .page#home,
+  #t5:target .page#home,
+  #t6:target .page#home {
+    background: url("../img/back7.jpg-large");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+}

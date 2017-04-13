@@ -454,7 +454,8 @@ i.upIcon:hover{
   display: block;
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
+
   html {
     overflow: scroll;
   }

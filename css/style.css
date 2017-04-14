@@ -220,6 +220,9 @@ li.icon {
   width: 80px;
 }
 
+.individualContainer {
+  margin-top: 40px;
+}
 
 
 #longPage h3 {
@@ -397,12 +400,23 @@ i.upIcon:hover{
 }
 
 .projDesc {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .projDesc i {
-  margin-top: 20%;
+  margin-top: 10%;
   font-size: 40px;
+}
+
+h5 a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family:  'Syncopate', sans-serif;
+  color: black;
+}
+
+.page h5 a {
+  color: white;
 }
 
 .fa-link:hover {
@@ -420,7 +434,6 @@ i.upIcon:hover{
 }
 
 .projectContainer {
-  margin-top: 2%;
   overflow: scroll;
 }
 
@@ -492,6 +505,13 @@ i.upIcon:hover{
   }
   .page {
     position: relative;
+  }
+
+  .contact_info {
+  width: 100%;
+  }
+  .projectsShrink {
+    padding: 0;
   }
 
   #home {
@@ -596,6 +616,14 @@ i.upIcon:hover{
   .projectContainer img{
     height: 200px;
     margin-left: 30px;
+  }
+
+  .page#contactHome {
+    margin-bottom: 50px;
+  }
+
+  .white-btn {
+    margin-bottom: 10px;
   }
 
 }

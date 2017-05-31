@@ -2,13 +2,22 @@ var ship;
 var meteors = [];
 var img;
 var lasers = [];
+var score = 0;
+
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 
 function setup() {
 	img = loadImage("../img/space.jpg");
 	createCanvas(windowWidth,windowHeight)
 	ship = new Ship();
 	meteor = new Meteor;
-	for (var i = 0; i < 4; i++) {
+	for (var i = 0; i < 15; i++) {
 		meteors.push(new Meteor());
 	}
 }
@@ -37,9 +46,13 @@ draw = function() {
 					meteors = meteors.concat(newMeteors);
 					meteors.splice(j, 1);
 					lasers.splice(i, 1);
+					score++;
+					$(".score").text(score * 100)
 					break;
 				} else {
 					meteors.splice(j, 1);
+					score++;
+					$(".score").text(score * 100)
 					checkWin();
 				}
 		}
@@ -60,8 +73,11 @@ function checkWin() {
 }
 
 keyReleased = function() {
-	ship.setRotation(0);
-	ship.moving(false);
+	if (keyCode == RIGHT_ARROW || keyCode == LEFT_ARROW) {
+		ship.setRotation(0);
+	} else if(keyCode == UP_ARROW) {
+		ship.moving(false);
+	}
 }
 
 keyPressed = function() {
@@ -81,10 +97,12 @@ $(function() {
 		$(".startScreen").hide();
 		meteors = [];
 		lasers = [];
+		score = 0;
+		$(".score").text(score)
 		setup();
 		redraw();
 		loop();
 
 	})
-
+	$(".score").text(score)
 });

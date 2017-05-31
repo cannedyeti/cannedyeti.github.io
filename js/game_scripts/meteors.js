@@ -1,5 +1,12 @@
 var meteorImg;
 
+function findMeteorSpawns(widthOrHeight){
+	let choices = [];
+	choices.push(random(0, (widthOrHeight/2)-100));
+	choices.push(random((widthOrHeight/2)+100), widthOrHeight);
+	return random(choices);
+}
+
 function preload() {
 	meteorImg = loadImage("../img/meteor.png")
 }
@@ -8,7 +15,7 @@ function Meteor (position, radius) {
 	if (position) {
 		this.position = position.copy();
 	} else {
-		this.position = createVector(random(random(0, 400)), random(random(0, 400)));
+		this.position = createVector(findMeteorSpawns(windowWidth), findMeteorSpawns(windowHeight));
 	}
 	if (radius) {
 		this.radius = radius/2;

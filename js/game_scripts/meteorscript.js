@@ -3,6 +3,8 @@ var meteors = [];
 var img;
 var lasers = [];
 var score = 0;
+var shipImg;
+var laserImg;
 
 window.addEventListener("keydown", function(e) {
     // space and arrow keys
@@ -13,15 +15,16 @@ window.addEventListener("keydown", function(e) {
 
 
 function setup() {
+	shipImg = loadImage("../img/pizza.svg");
 	img = loadImage("../img/space.jpg");
+	laserImg = loadImage("../img/pep.png");
 	createCanvas(windowWidth,windowHeight)
-	ship = new Ship();
+	ship = new Ship(shipImg);
 	meteor = new Meteor;
 	for (var i = 0; i < 15; i++) {
 		meteors.push(new Meteor());
 	}
 }
-
 draw = function() {
 	background(img);
 

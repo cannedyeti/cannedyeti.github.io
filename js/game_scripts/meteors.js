@@ -8,7 +8,7 @@ function findMeteorSpawns(widthOrHeight){
 }
 
 function preload() {
-	meteorImg = loadImage("../img/meteor.png")
+	meteorImg = loadImage("../img/jackson.png")
 }
 
 function Meteor (position, radius) {

@@ -1,8 +1,8 @@
-function Ship() {
+function Ship(img) {
 	this.rotation = 0;
 	this.position = createVector(windowWidth/2,windowHeight/2);
 	this.heading = random(360);
-	this.radius = 15;
+	this.radius = 20;
 	this.velocity = createVector(0, 0);
 	this.isMoving = false;
 
@@ -38,13 +38,14 @@ function Ship() {
 
 	this.render = function() {
 		push();
-		// image(shipImg, this.position.x, this.position.y, this.radius, this.radius);
+		// image(img, this.position.x, this.position.y, this.radius, this.radius);
 		translate(this.position.x, this.position.y);
 		stroke(0, 255, 255);
 		fill(0);
 		rotate(this.heading + PI/2);
 		triangle(-this.radius, this.radius, this.radius, this.radius, 0, (-this.radius*1.5));
 		pop();
+
 	}
 
 
@@ -76,6 +77,7 @@ function Laser(shipHead, angle) {
 	}
 	this.render = function() {
 		push();
+		// image(img, this.position.x, this.position.y, 20, 20);
 		strokeWeight(6);
 		stroke(255, 0, 0);
 		point(this.position.x, this.position.y);

@@ -71,6 +71,7 @@ function checkWin() {
 		console.log('suck it')
 		noLoop();
 		$(".startScreen > h1").text("YOU WON! Play again?")
+		$(".startScreen > h3").text("")
 		$(".startScreen").show();
 	}
 }

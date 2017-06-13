@@ -2,7 +2,7 @@ function Ship(img) {
 	this.rotation = 0;
 	this.position = createVector(windowWidth/2,windowHeight/2);
 	this.heading = random(360);
-	this.radius = 20;
+	this.radius = 15;
 	this.velocity = createVector(0, 0);
 	this.isMoving = false;
 
@@ -35,6 +35,8 @@ function Ship(img) {
 			this.position.y = height + this.radius;
 		}
 	}
+
+	
 
 	this.render = function() {
 		push();
